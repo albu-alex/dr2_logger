@@ -8,7 +8,6 @@ from source import networking
 from source import utils
 from source import plots
 from source import settings
-# from source.dr1.game_dr1 import GameDr1
 from source.dirt_rally.game_dirt_rally import GameDirtRally
 
 

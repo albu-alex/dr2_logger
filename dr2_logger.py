@@ -133,5 +133,5 @@ def main():
     logger_backend.end_logging()
 
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
