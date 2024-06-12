@@ -161,7 +161,7 @@ class LoggerBackend:
 
     def clear_session_collection(self):
         self.session_collection = np.zeros((self.game.get_num_fields(), 0))
-        self.first_sample = np.zeros((self.game.get_num_fields(),))
+        self.first_sample = np.zeros((self.game.get_num_fields()))
         self.last_receive_results = None
 
     def start_logging(self):

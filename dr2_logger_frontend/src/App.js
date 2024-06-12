@@ -39,6 +39,10 @@ function App() {
               <Speedometer speed={telemetryData.Speed.split(' ')[0] * 3.6} />
               <Revometer rpm={telemetryData.RPM} />
             </div>
+            <div style={{flex: 1, display: 'flex', alignContent: 'center', flexDirection: 'column', justifyContent: 'center'}}>
+                <b>Current time:</b> {telemetryData.Time}
+                <b>Estimated time of arrival:</b> {telemetryData.ETA}
+            </div>
           </div>
         ) : (
           <p>Loading..</p>

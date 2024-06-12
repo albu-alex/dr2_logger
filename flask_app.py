@@ -2,6 +2,7 @@ from flask import Flask, jsonify
 from flask_cors import CORS
 from source.logger_backend import LoggerBackend
 import threading
+import re
 
 app = Flask(__name__)
 CORS(app)
@@ -12,7 +13,8 @@ def get_game_state_str():
     game_state_str = logger_backend.get_game_state_str()
     # Remove "Race Logger" prefix from the string
     game_state_str = game_state_str.replace("Race Logger ", "")
-    game_state_str = game_state_str.replace("|----------------| ", "")
+    pattern = r'\|.{16}\|'
+    game_state_str = re.sub(pattern, '', game_state_str)
     key_value_pairs = [pair.strip() for pair in game_state_str.split(',')]
     game_state_dict = {}
 
